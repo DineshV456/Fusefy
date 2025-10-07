@@ -111,5 +111,16 @@ public class CustomerFormPage {
 		submitButton.click();
 		
 	}
+	
+	public void clearLanguage() {
+		language.clear();	
+	} 
+	
+	
+	public void clearCurrency() {
+		currency.clear();
+	} 
+		
+	
 
 }
