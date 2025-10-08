@@ -26,16 +26,26 @@ WebDriver driver;
 	@Test
 	
 	private void custForm() {
-		cp.enterName("Martin Scorsese");
-		cp.enterEmail("marty@gmail.com");
-		cp.enterContact("9876543210");
+		
+		//🧑‍💼 Preferences
+		cp.enterLanguage("Tamil");
+		cp.enterCurrency("INR");
+		
+		//👤 Your Details
+		cp.enterName("Martin");
+		cp.enterEmail("marty123@gmail.com");
 		cp.residenceCountry("United States");
-		cp.enterLanguage("English");
-		cp.enterCurrency("AED");
-		cp.enterCountry("United Arab Emirates");
-		cp.enterCity("Sharjah");
-		cp.enterBudget("30000");
+		cp.enterContact("88776655443322");
+		cp.selectType("Office");
+		
+		
+		//💼Investment Details
+		cp.enterCountry("United Kingdom");
+		cp.enterCity("Kennington");
 		cp.enterObjective("Rental Income");
+		cp.enterBudget("40000");
+		
+		//Submit
 		cp.clickSubmit();
 		
 		

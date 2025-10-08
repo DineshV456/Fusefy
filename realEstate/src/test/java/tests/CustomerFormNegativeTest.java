@@ -1,11 +1,9 @@
 package tests;
 
-import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -28,7 +26,7 @@ WebDriver driver;
 	}
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 1) // FirstName field missing
 	private void missingName() {
 		cp.enterEmail("dk456@gmail.com");
 		cp.enterContact("9876543210");
@@ -49,7 +47,7 @@ WebDriver driver;
 	}
 	
 	
-	@Test(priority = 2)
+	@Test(priority = 2) // Email field missing
 	
 	private void missingEmail() {
 		cp.enterName("Mark");
@@ -71,7 +69,7 @@ WebDriver driver;
 	}
 	
 	
-	@Test(priority = 3)
+	@Test(priority = 3) // Contact number field missing
 	
 	private void missingContact() {
 		cp.enterName("mark");
@@ -91,7 +89,7 @@ WebDriver driver;
 		System.out.println("Form stayed on the same page – Contact number validation working");
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 4) // Residence country field missing
 	private void missingResidenceCountry() {
 		cp.enterName("mark");
 		cp.enterEmail("mark345@gmail.com");
@@ -110,7 +108,7 @@ WebDriver driver;
 		System.out.println("Form stayed on the same page – Residence country validation working");
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 5) // Language field empty
 	private void missingLanguage() {
 		cp.enterName("mark");
 		cp.enterEmail("mark234@gmail.com");
@@ -130,7 +128,7 @@ WebDriver driver;
 		System.out.println("Form stayed on the same page – Language validation working");	
 	}	
 	
-	@Test(priority = 6)
+	@Test(priority = 6) // Currency field empty
 	
 	private void missingCurrency() {
 		cp.enterName("mark");
@@ -152,7 +150,7 @@ WebDriver driver;
 	
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 7) // Country field empty
 	
 	private void missingCountry() {
 		cp.enterName("mark");
@@ -172,7 +170,7 @@ WebDriver driver;
 		System.out.println("Form stayed on the same page – Country validation working");	
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 8) // City field empty
 	
 	private void missingCity() {
 		cp.enterName("mark");
@@ -193,7 +191,7 @@ WebDriver driver;
 		
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 9) // Budget field empty
 	
 	private void missingBudget() {
 		cp.enterName("Martin Scorsese");
@@ -213,7 +211,7 @@ WebDriver driver;
 		System.out.println("Form stayed on the same page – Budget validation working");	
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 10) // Investment objective field empty
 	
 	private void missingObjective() {
 		cp.enterName("Martin Scorsese");
@@ -234,7 +232,7 @@ WebDriver driver;
 				
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 11) // All fields empty
 	
 	private void submitFormWithAllFieldsEmpty() {
 
