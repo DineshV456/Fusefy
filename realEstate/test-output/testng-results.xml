@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="11" total="12" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-08T13:00:27 IST" name="Default suite" finished-at="2025-10-08T13:00:34 IST" duration-ms="6771">
+  <suite started-at="2025-10-08T16:54:54 IST" name="Default suite" finished-at="2025-10-08T16:55:01 IST" duration-ms="7394">
     <groups>
     </groups>
-    <test started-at="2025-10-08T13:00:27 IST" name="Default test" finished-at="2025-10-08T13:00:34 IST" duration-ms="6771">
-      <class name="tests.CustomerFormTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.CustomerFormTest@7c137fd5]" started-at="2025-10-08T13:00:27 IST" name="setup" finished-at="2025-10-08T13:00:29 IST" duration-ms="2500" status="PASS">
+    <test started-at="2025-10-08T16:54:54 IST" name="Default test" finished-at="2025-10-08T16:55:01 IST" duration-ms="7394">
+      <class name="tests.CustomerFormNegativeTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.CustomerFormNegativeTest@1349883]" started-at="2025-10-08T16:54:54 IST" name="setup" finished-at="2025-10-08T16:54:57 IST" duration-ms="3101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="custForm()[pri:0, instance:tests.CustomerFormTest@7c137fd5]" started-at="2025-10-08T13:00:29 IST" name="custForm" finished-at="2025-10-08T13:00:34 IST" duration-ms="4212" status="PASS">
+        <test-method signature="missingLanguage()[pri:1, instance:tests.CustomerFormNegativeTest@1349883]" started-at="2025-10-08T16:54:57 IST" name="missingLanguage" finished-at="2025-10-08T16:55:01 IST" duration-ms="4224" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- custForm -->
-      </class> <!-- tests.CustomerFormTest -->
+        </test-method> <!-- missingLanguage -->
+      </class> <!-- tests.CustomerFormNegativeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

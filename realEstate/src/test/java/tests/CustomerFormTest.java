@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.CustomerFormPage;
+import utils.Config;
 
 public class CustomerFormTest {
 	
@@ -17,7 +18,7 @@ WebDriver driver;
 	
 	public void setup() {
 		driver = new ChromeDriver();
-		driver.get("http://localhost:5173/");
+		driver.get(Config.base_Url);
 		driver.manage().window().maximize();
 		cp = new CustomerFormPage(driver);
 

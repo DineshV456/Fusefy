@@ -22,8 +22,7 @@ public class CustomerFormPage {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 	
-	//***Locators***
-	
+	//***Locators***	
 	//🧑‍💼Preferences
 	
 	@FindBy(xpath="(//input[@role='combobox'])[1]")
@@ -61,7 +60,7 @@ public class CustomerFormPage {
 	private WebElement city;;
 	
 	@FindBy(xpath="(//input[@role='combobox'])[6]")
-	private WebElement investementObjective;
+	private WebElement investmentObjective;
 	
 	@FindBy(name="budget")
 	private WebElement budget;
@@ -70,7 +69,6 @@ public class CustomerFormPage {
 	
 	@FindBy(xpath="//button[@type='submit']")
 	private WebElement submitButton;
-	
 	
 	
 	//helper for dropdowns	
@@ -84,9 +82,7 @@ public class CustomerFormPage {
 
 	
 	//***Actions***
-	
-	//🧑‍💼	Preferences
-	
+	//🧑‍💼	Preferences	
 	public void enterLanguage(String lang) {
 		selectFromDropdown(language, lang);	
 	}
@@ -96,8 +92,7 @@ public class CustomerFormPage {
 	}
 	
 	
-	//👤 Your Details
-	
+	//👤 Your Details	
 	public void enterName(String name) {
 		fullname.sendKeys(name);
 	}
@@ -120,8 +115,7 @@ public class CustomerFormPage {
 		
 	}
 	
-	//💼 Investment Details
-		
+	//💼 Investment Details		
 	public void enterCountry(String cont) {
 		selectFromDropdown(country, cont);
 	}
@@ -131,7 +125,7 @@ public class CustomerFormPage {
 	}
 	
 	public void enterObjective(String invObj) {
-		selectFromDropdown(investementObjective, invObj);
+		selectFromDropdown(investmentObjective, invObj);
 	}
 
 	public void enterBudget(String Pbudget) {
@@ -140,12 +134,9 @@ public class CustomerFormPage {
 	
 	
 	//Submit button
-	
+
 	public void clickSubmit() {
 		submitButton.click();
 		
-	}
-		
-	
-
+	}			
 }
