@@ -1,7 +1,14 @@
 package tests;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -48,8 +55,27 @@ WebDriver driver;
 		
 		//Submit
 		cp.clickSubmit();
-		
-		
-	}
+		verifySubmission();
 
-}
+		
+	}	
+	
+	//To validate submission popup
+	private void verifySubmission() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement successPopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Thank you for your submission!']")));
+		
+		//validate popup displayed
+		Assert.assertTrue(successPopup.isDisplayed(), "Success popup not displayed");
+		
+		//Close popup
+		driver.findElement(By.xpath("//button[text()='Close']")).click();
+		System.out.println("Form submitted successfully and popup closed");
+
+	}
+	}
+	
+	
+	
+
+
